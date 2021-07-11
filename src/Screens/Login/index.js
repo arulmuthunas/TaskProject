@@ -19,7 +19,6 @@ const LoginScreen = ({ navigation }) => {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
-      console.log("userInfo", userInfo)
       if (userInfo) {
         navigation.push('DashBoard')
       }
